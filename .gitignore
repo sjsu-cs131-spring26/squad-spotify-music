@@ -1,7 +1,7 @@
-*.csv
+
 *.json
 *.parquet
-data/*.csv
+
 data/*.json
 
 # Python
