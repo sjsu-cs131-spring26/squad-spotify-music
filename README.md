@@ -1,4 +1,4 @@
-# Squad = Spotify Music Analysis
+# Squad - Spotify Music Analysis
 
 ## Team Members
 - Jonathan Sunny 
