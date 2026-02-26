@@ -20,7 +20,7 @@
 id, name, album, album_id, artists, artist_ids, track_number, disc_number, explicit, danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo, duration_ms, time_signature, year, release_date
 
 ## Data Quality Notes
-- `artists` and `artist_ids` columns contain lists formatted as `"['artist1', 'artist2']"` with embedded commas — requires special parsing (awk/grep instead of cut)
+- `artists` and `artist_ids` columns contain lists formatted as `"['artist1', 'artist2']"` with embedded commas - required special parsing.
 - Some tracks have multiple artists which inflates artist counts
 - `explicit` is a boolean (True/False string)
 - `year` and `release_date` are separate columns (year is integer, release_date is YYYY-MM-DD)
