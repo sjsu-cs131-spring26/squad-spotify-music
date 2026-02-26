@@ -1,7 +1,62 @@
-Script started on 2026-02-26 01:13:45-05:00
-bash-4.4$ 
-bash-4.4$ grep -i "beatles" ~/data/tracks_features.csv | cut -d',' -f2,23 | sort  -u | tee out/beatles_tracks.txt > out/results.txt 2> out/errors.txt
-bash-4.4$ exot[K[Kit
+Script started on 2026-02-26 01:33:15-05:00
+bash-4.4$ wc -l ~/data/tracks_features.csv
+1204026 /mnt/scratch/CS131_jelenag/students/jonathans/data/tracks_features.csv
+bash-4.4$ ls -lh ~/data/tracks_features.csv
+-rw-r--r-- 1 jonathans jelenag 330M Dec 22  2020 /mnt/scratch/CS131_jelenag/students/jonathans/data/tracks_features.csv
+bash-4.4$ head -1 ~/data/tracks_features.csv
+id,name,album,album_id,artists,artist_ids,track_number,disc_number,explicit,danceability,energy,key,loudness,mode,speechiness,acousticness,instrumentalness,liveness,valence,tempo,duration_ms,time_signature,year,release_date
+bash-4.4$ cat out/freq_year.txt
+  69725 2020
+  67263 2019
+  56085 2018
+  52847 2007
+  52092 2006
+  50981 2017
+  48531 2008
+  47055 2016
+  46586 2013
+  45747 2015
+  44350 2005
+  43917 2014
+  43775 2009
+  43619 2011
+  43337 2012
+  43136 2010
+  32703 2004
+  28199 2003
+  24384 2002
+  23640 2000
+bash-4.4$ cat out/freq_explicit.txt
+1121379 False
+  82761 True
+bash-4.4$ cat out/topN_artists.txt
+   1080 Traditional
+    743 Igor Stravinsky
+    700 Anonymous
+    547 Giuseppe Verdi
+    476 Johann Sebastian Bach
+    472 Philip Glass
+    386 Gustav Mahler
+    383 Claude Debussy
+    355 Modest Mussorgsky
+    353 Ralph Vaughan Williams
+bash-4.4$ grep -i "beatles" ~/data/tracks_features.csv | wc -l
+498
+bash-4.4$ grep -v ",True," ~/data/tracks_features.csv | wc -l | tee out/non_expliicit_count.txt
+1121270
+bash-4.4$ grep -i "taylor" ~/data/tracks_features.csv | cut -d',' -f2,23 | sort --u > out/taylor_tracks.txt 2> out/errors.txt
+bash-4.4$ cat out/taylor_tracks.txt | head -10
+12 String Mile,1997
+"1st Book of Songs: No. 17,0.00271
+"1st Book of Songs: No. 5,0.9590000000000001
+21st Century World,1999
+22,2013
+22,2017
+22,4.0
+"24 Negro Melodies,103.228
+25x,4.0
+"2nd Book of Songs: No. 1,0.107
+bash-4.4$ exit
 exit
 
-Script done on 2026-02-26 01:14:30-05:00
+Script done on 2026-02-26 01:35:02-05:00
