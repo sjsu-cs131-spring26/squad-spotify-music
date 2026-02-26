@@ -1,0 +1,7 @@
+Script started on 2026-02-26 01:13:45-05:00
+bash-4.4$ 
+bash-4.4$ grep -i "beatles" ~/data/tracks_features.csv | cut -d',' -f2,23 | sort  -u | tee out/beatles_tracks.txt > out/results.txt 2> out/errors.txt
+bash-4.4$ exot[K[Kit
+exit
+
+Script done on 2026-02-26 01:14:30-05:00
