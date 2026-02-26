@@ -12,7 +12,7 @@ head -1 $DATA > data/samples/sample_1k.csv
 tail -n +2 $DATA | shuf -n 1000 >> data/samples/sample_1k.csv
 
 echo "Building frequency tables..."
-printf "1121379 False\n  82761 True\n" > out/freq_explicit.txt
+tail -n +2 $DATA | cut -d',' -f9 | sort | uniq -c | sort -nr > out/freq_explicit.txt
 grep -oP '\d{4},\d{4}-\d{2}-\d{2}$' $DATA | cut -d',' -f1 | sort | uniq -c | sort -nr | head -20 > out/freq_year.txt
 
 echo "Building Top-N artists..."
