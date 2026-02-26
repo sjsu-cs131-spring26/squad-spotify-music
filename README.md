@@ -8,8 +8,9 @@
 - Robyn Decastro 
 
 ## Dataset
-**Source** [Spotify Tracks Dataset] (https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset)
+**Source** [Spotify 1.2M+ Songs](https://www.kaggle.com/datasets/rodolfofigueroa/spotify-12m-songs)
 **Description:** This dataset contains information about Spotify tracks including audio features (tempo, energy, danceability, acousticness), popularity metrics, and metadata (artist, album, release date).
+
 
 ## Repository Structure
 ```
