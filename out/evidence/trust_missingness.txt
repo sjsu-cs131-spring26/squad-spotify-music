@@ -1,0 +1,5 @@
+rows=114000
+missing_track_id=0
+missing_artists=1
+missing_explicit=0
+missing_genre=0
