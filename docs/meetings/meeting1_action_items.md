@@ -13,7 +13,7 @@ Date: 2026-03-08
   Owner: Arav Bhatt
   Due: 2026-03-11
 
-- Action item: Set up Sprint 3 Board and commit Meeting 2 documents via Storyteller PR
+- Action item: Set up Sprint 3 Board via Storyteller PR
   Owner: Lohit Kishore
   Due: 2026-03-11
 
