@@ -1,0 +1,13 @@
++ set -euo pipefail
++ DATASET=../dataset.csv
++ DELIM=,
++ [[ -z ../dataset.csv ]]
++ OUTDIR=out/evidence
++ LOGFILE=out/run_sprint3.log
++ ERRFILE=out/errors.log
++ mkdir -p out/evidence out
++ COL_TRACK_ID=2
++ COL_ARTISTS=3
++ COL_EXPLICIT=8
++ COL_GENRE=21
++ tee out/run_sprint3.log
