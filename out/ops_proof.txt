@@ -1,0 +1,20 @@
+[1]+ 2050743 Done                    ./scripts/run_sprint3.sh ../dataset.csv ','
+    PID TTY          TIME CMD
+1961116 ?        00:00:00 sshd
+1961117 pts/166  00:00:00 bash
+2038789 ?        00:00:00 sshd
+2038790 pts/165  00:00:00 bash
+2050775 pts/165  00:00:00 ps
+2050776 pts/165  00:00:00 tee
+3594206 ?        01:22:22 systemd
+3594207 ?        00:00:00 (sd-pam)
+3676806 ?        00:00:00 ssh-agent
+4094350 ?        00:00:00 tmux: server
+4094351 pts/207  00:00:00 bash
+=== Sprint 3 Run Start ===
+Thu Mar 12 00:38:27 EDT 2026
+Dataset: ../dataset.csv
+
+
+=== Sprint 3 Run End ===
+Thu Mar 12 00:38:30 EDT 2026
