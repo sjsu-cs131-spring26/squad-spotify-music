@@ -11,15 +11,19 @@ mkdir -p out logs
 
 chmod -R g+rX "$INPUT" 2>/dev/null || true
 
+LOG="logs/run_pa4.log"
+echo "Starting PA4 run at $(date)" | tee "$LOG"
+echo "Dataset: $INPUT" | tee -a "$LOG"
+
 # Task 2: Quality filters
-echo "Running Task 2: Quality filters..."
+echo "Running Task 2: Quality filters..." | tee -a "$LOG"
 awk -F',' '
   NR==1 || (NF>=24 && $2!="" && $(NF-1)~/^[0-9]{4}$/ && $10+0>=0 && $10+0<=1.0)
 ' "$INPUT" | head -1001 > out/filtered_sample.tsv || true
-echo "Done. Output: out/filtered_sample.tsv"
+echo "Done. Output: out/filtered_sample.tsv" | tee -a "$LOG"
 
 # Task 4: Temporal danceability analysis
-echo "Running Task 4: Temporal danceability analysis..."
+echo "Running Task 4: Temporal danceability analysis..." | tee -a "$LOG"
 awk -F',' '
   NR==1{next}
   {year=$(NF-1); dance=$10;
@@ -27,6 +31,6 @@ awk -F',' '
      {sum[year]+=dance; count[year]++}}
   END{for(y in sum) printf "%s\t%d\t%.3f\n", y, count[y], sum[y]/count[y]}
 ' "$INPUT" | sort -k1,1n > out/year_danceability.tsv
-echo "Done. Output: out/year_danceability.tsv"
+echo "Done. Output: out/year_danceability.tsv" | tee -a "$LOG"
 
-echo "All tasks complete."
+echo "All tasks complete at $(date)" | tee -a "$LOG"
