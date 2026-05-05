@@ -16,7 +16,7 @@ spark = (
 #Mostly intact code from notebook 
 data = spark.read.csv("gs://spotify-tracks-dataset/tracks_features.csv", header=True, inferSchema=True, sep=",", quote='"', escape='"')
 
-#------Check the data is imported correctly 
+#-------Check the data is imported correctly 
 print("--Data imported-- \nSchema:")
 data.printSchema()
 
@@ -40,7 +40,8 @@ top_artists = (
 )
 
 
-top_artists.coalesce(1).limit(20).write.mode("overwrite").parquet("gs://spotify-tracks-dataset/outputs")
+
+top_artists.coalesce(1).limit(20).write.mode("overwrite").csv("gs://spotify-tracks-dataset/outputs/top-artists")
 top_artists.show(20, truncate=False)
 
 
@@ -57,7 +58,7 @@ year_count = (
 )
 
 year_count.show(200)
-year_count.coalesce(1).write.mode("overwrite").parquet("gs://spotify-tracks-dataset/outputs")
+year_count.coalesce(1).write.mode("overwrite").csv("gs://spotify-tracks-dataset/outputs/decade-songs")
 
 
 
@@ -78,5 +79,5 @@ yearly_features = (
 )
 
 yearly_features.show(20)
-yearly_features.coalesce(1).limit(20).write.mode("overwrite").parquet("gs://spotify-tracks-dataset/outputs")
+yearly_features.coalesce(1).limit(20).write.mode("overwrite").csv("gs://spotify-tracks-dataset/outputs/yearly-features")
 
